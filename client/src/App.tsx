@@ -1,9 +1,21 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components/header/Header';
+import LandingPage from './pages/LandingPage';
+
+
 
 
 function App() {
   return (
-    <div>안녕하세요</div>
+    <>
+    <BrowserRouter>
+    <Header />
+    <Switch>      
+      <Route exact path="/" component={LandingPage}></Route>
+    </Switch>
+    </BrowserRouter>
+    </>
   );
 }
 
