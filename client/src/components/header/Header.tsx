@@ -29,7 +29,7 @@ const Container = styled.header`
     position: sticky;
     width: 100vw;
     height: 80px;
-    font-weight: 600;
+    font-weight: 650;
 `;
 
 const RightContainer = styled.section`
