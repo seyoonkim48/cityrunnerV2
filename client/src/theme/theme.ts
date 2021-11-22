@@ -1,7 +1,7 @@
 const color = {
 	withe: "",
-	black: "",
-	gray: "",
+	violet:"#6C63FF",
+	placeholder: "#adb5bd",
 	hovergray: "",
 	green: "",
 	apricot: "",
