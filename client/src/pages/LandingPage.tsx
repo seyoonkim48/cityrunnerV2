@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import { FlexColum } from '../theme/flex';
+import { theme } from '../theme/theme';
 import workingout from '../utils/landingImage/workingout.svg'
 
 
@@ -40,7 +41,7 @@ const TextContainer = styled.div`
         margin-left: 6rem;
     }
     button{
-        background-color: #6C63FF;
+        background-color: ${theme.color.violet};
         border-radius: 14px;
         width: 300px;
         height: 50px;
