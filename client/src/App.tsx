@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Admin from './pages/Admin';
 import Community from './pages/Community';
@@ -23,6 +24,7 @@ function App() {
       <Route exact path="/signin" component={SignIn}></Route>
       <Route exact path="/signup" component={SignUp}></Route>
     </Switch>
+    <Footer/>
     </BrowserRouter>
     </>
   );
