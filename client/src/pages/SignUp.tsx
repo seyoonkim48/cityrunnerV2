@@ -1,9 +1,12 @@
+import { AxiosResponse } from 'axios';
 import React from 'react';
 import styled from 'styled-components';
 import { FlexColum } from '../theme/flex';
 import { theme } from '../theme/theme';
 
 const SignUp = () => {
+const responseBody = (response: AxiosResponse) => response.data
+
     return (
         <Container>
             <Title>회원가입</Title>
