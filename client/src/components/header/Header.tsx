@@ -14,7 +14,7 @@ const history = useHistory();
          <Item onClick={()=> history.push('/')}>CityRunner</Item>
         </LeftContainer>
          <RightContainer>
-        <Item onClick={()=> history.push('/matchin')}>매칭페이지</Item>
+        <Item onClick={()=> history.push('/matching')}>매칭페이지</Item>
         <Item onClick={()=> history.push('/community')}>커뮤니티</Item>
         <Item onClick={()=> history.push('/signin')}>로그인</Item>
         <Item onClick={()=> history.push('/signup')}>회원가입</Item>

@@ -6,13 +6,26 @@ import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './styles/ GlobalStyles'
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme/theme';
+import { Provider } from 'react-redux';
+import reduxThunk from 'redux-thunk';
+import promiseMiddlerware from 'redux-promise';
+import rootReducer from './redux';
+import { applyMiddleware, createStore } from 'redux';
+
+
+const createStoreWidthMiddleware = applyMiddleware(
+  promiseMiddlerware,
+  reduxThunk,
+)(createStore);
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={createStoreWidthMiddleware(rootReducer)}>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
     <App />
     </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

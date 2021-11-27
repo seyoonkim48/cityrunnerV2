@@ -1,9 +1,12 @@
+import { AxiosResponse } from 'axios';
 import React from 'react';
 import styled from 'styled-components';
 import { FlexColum } from '../theme/flex';
 import { theme } from '../theme/theme';
 
 const SignUp = () => {
+const responseBody = (response: AxiosResponse) => response.data
+
     return (
         <Container>
             <Title>회원가입</Title>
@@ -18,25 +21,23 @@ const SignUp = () => {
             <SubmitContainer>
             <button>가입하기</button>
             </SubmitContainer>
-            
         </Container>
     )
 }
 
-const Container = styled.div`
+export const Container = styled.div`
     ${FlexColum}
     margin-top: 6rem;
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
     font-size: 35px;
     margin-bottom: 3rem;
 `;
 
-const InputContainer = styled.div`
+export const InputContainer = styled.div`
     ${FlexColum}
     input{
-        
         border-bottom: solid 1px ${theme.color.placeholder};
         height: 3rem;
         width: 350px;
@@ -50,7 +51,7 @@ const InputContainer = styled.div`
         }
 `;
 
-const SubmitContainer = styled.div`
+export const SubmitContainer = styled.div`
     margin-top: 4rem;
     button{
         width: 350px;
