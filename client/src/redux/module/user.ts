@@ -5,7 +5,7 @@ const LOGIN_USER = 'user/LOGIN_USER' as const;
 const LOGOUT_USER = 'user/LOGOUT_USER' as const;
 
 
-export const registerUser = (Submitdata = Object) => {
+export const registerUser = (Submitdata: object) => {
 const data = userApi.register(Submitdata)
     return {
         type: REGISTER_USER,
@@ -59,6 +59,7 @@ export default function user(state: UserState = initialState, action: UserAction
         ...state,
         isSuccess: true,
         }
+
         default: return state
     }
 }
